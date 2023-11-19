@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = 'mongodb://127.0.0.1/hello';
+const connectionString = 'mongodb+srv://keertheshwaran:EHIYlNqijxFub1FZ@cluster0.4peos7q.mongodb.net/';
 
 async function ConnectToMongoose() {
   try {
@@ -8,6 +8,7 @@ async function ConnectToMongoose() {
       useUnifiedTopology: true,
     });
     console.log('Connected to MongoDB');
+    console.log(connectionString);
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
   }
