@@ -107,4 +107,8 @@ router.post('/getuser', fetchuser ,async(req, res) => {
       return res.status(500).send("User Details Not Found!")
     }
   })
+//  ROUTE - 3 -  Handle and Get User Data to display
+router.post('/summa',async(req, res) => {
+      return res.status(500).send("User Details Found!")
+  });
 module.exports = router;
