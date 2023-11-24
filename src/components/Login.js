@@ -5,9 +5,11 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
     const [credencials, setcredencials] = useState({email:"",password:""})
     const navigate = useNavigate();
+    const host = "https://tizonnotebook4.onrender.com";
     const handleLogin = async (e)=>{
         e.preventDefault();
-        const response =  await fetch("http://localhost:5000/api/auth/login", {
+
+        const response =  await fetch(`${host}/api/auth/login`, {
             method: "POST",
             headers:{
                 "Content-Type":"application/json"

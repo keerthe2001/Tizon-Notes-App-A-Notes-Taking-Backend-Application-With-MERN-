@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 export default function Signup() {
     const [credencials, setcredencials] = useState({name:"",email:"",password:"",cpassword:""})
     const navigate = useNavigate();
+    const host = "https://tizonnotebook4.onrender.com";
    const handlesignup = async(e) =>{
-
     e.preventDefault();
-    const response =  await fetch("http://localhost:5000/api/auth/createUser", {
+    const response =  await fetch(`${host}/api/auth/createUser`, {
             method: "POST",
             headers:{
                 "Content-Type":"application/json"
