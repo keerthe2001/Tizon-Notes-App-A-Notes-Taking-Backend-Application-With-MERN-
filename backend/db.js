@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://keertheshwaran:EHIYlNqijxFub1FZ@cluster0.4peos7q.mongodb.net/';
+const connectionString = PROCESS.ENV.connectionString;
 
 async function ConnectToMongoose() {
   try {
