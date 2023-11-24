@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import NoteContext from "./notecontext";
 
 const NoteState = (props) => {
-  const host = 'http://localhost:5000';
+  const host = 'https://tizonnotebook4.onrender.com/';
   const notesInitial = [];
 
   const [notes, setNotes] = useState(notesInitial);
@@ -41,7 +41,7 @@ const NoteState = (props) => {
         body: JSON.stringify({ title, description, tag })
       });
       const json = await response.json();
-      
+      // eslint-disable-next-line
       let note = {
         "title": title,
         "description": description,
