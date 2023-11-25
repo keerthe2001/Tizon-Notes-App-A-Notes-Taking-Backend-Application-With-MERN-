@@ -34,9 +34,8 @@ function DisplayNotes() {
       if (localStorage.getItem('token') == null) {
         navigate('/login');
       }
-      else{
         getNotes();
-      }
+      
     
      }
    }, [])
