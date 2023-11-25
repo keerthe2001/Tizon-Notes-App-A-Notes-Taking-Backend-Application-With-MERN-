@@ -15,10 +15,7 @@ function DisplayNotes() {
 
      console.log(note)
      ref.current.click();
-    // const title  = document.getElementById("etitle").value = currentNote.title;
-    // const desc = document.getElementById("edescription").value = currentNote.description;
-    // const tag = document.getElementById("etag").value = currentNote.tag;
-  }
+      }
   const handleClick = (e) =>{
     e.preventDefault();
     console.log("The Updated Note is ",note.eid,note.etitle,note.edescription,note.etag)
@@ -34,10 +31,12 @@ function DisplayNotes() {
     const { notes, getNotes, editNote } = context;
    useEffect(() => {
      return () => {
-      if (!localStorage.getItem('token')) {
+      if (localStorage.getItem('token') == null) {
         navigate('/login');
       }
+      else{
         getNotes();
+      }
     
      }
    }, [])
